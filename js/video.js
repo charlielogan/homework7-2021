@@ -39,13 +39,11 @@ window.addEventListener("load", function() {
 	document.getElementById("mute").addEventListener("click", function() {
 		console.log('mute');
 		if(document.getElementById("mute").innerHTML === "Mute"){
-			video.volume = 0;
-			document.getElementById("volume").innerHTML = "0%";
+			video.muted = true;
 			document.getElementById("mute").innerHTML = "Unmute";
 		}
 		else{
-			video.volume = document.getElementById("slider").value/100;
-			document.getElementById("volume").innerHTML = document.getElementById("slider").value + "%";
+			video.muted = false;
 			document.getElementById("mute").innerHTML = "Mute";
 		}
 	});
